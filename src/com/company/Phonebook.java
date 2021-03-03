@@ -13,9 +13,9 @@ public class Phonebook implements Directory {
         System.out.println(surname + " :" + phones);
      return phones;
     }
-    public Phonebook() {
-        phonesBySurname = new TreeMap <>();
-    }
+//    public Phonebook() {
+//        phonesBySurname = new TreeMap <>();
+//    }
     @Override
     public void add(String[] surname, String[] phone) {
         Map <String, String> phoneBook = new HashMap <>();
@@ -48,12 +48,8 @@ public class Phonebook implements Directory {
         String[] phones = {"456 789", "270 270", "154 123", "788 695", "785 695", "327 456", "270 275", "147 233"};
         Phonebook phonebook = new Phonebook();
         phonebook.add(surnames, phones);
-        Set <String[]> allSurnames = phonebook.getAllSurname();
-        for (String[] surname: allSurnames) {
-            Set<String[]> phone = ( Set <String[]> ) phonebook.get(surname);
-            System.out.println(surname + " : " + phone);
-        }
-
+        phonebook.getPhones(surnames);
 
     }
 }
+
