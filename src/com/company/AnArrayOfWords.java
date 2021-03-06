@@ -30,24 +30,4 @@ public class AnArrayOfWords  {
         AnArrayOfWords arrayOfWords = new AnArrayOfWords();
         arrayOfWords.UniqueArray(wordsList);
         }
-
-        @Override
-    public String toString() {
-        return new StringJoiner(", ", AnArrayOfWords.class.getSimpleName() + "[", "]")
-                .add("words=" + words)
-                .toString();
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o ) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        AnArrayOfWords that = ( AnArrayOfWords ) o;
-        return Objects.equals(words, that.words);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(words);
-    }
 }
